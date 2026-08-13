@@ -36,7 +36,7 @@
   }
 }
 
-/* one tonal wash — weighted to the lower left, so the photograph still reads */
+/* one tonal wash - weighted to the lower left, so the photograph still reads */
 .media::after {
   content: '';
   position: absolute;

@@ -14,7 +14,7 @@ export default function Contact() {
   const [detailsRef, detailsClass, detailsStyle] = useReveal()
   const [formRef, formClass, formStyle] = useReveal(120)
 
-  // Frontend only — nothing is transmitted anywhere.
+  // Frontend only - nothing is transmitted anywhere.
   const handleSubmit = (event) => {
     event.preventDefault()
     setSent(true)

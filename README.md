@@ -1,4 +1,4 @@
-# Unico Dental — website
+# Unico Dental - website
 
 A one-page website built with React + Vite. Plain CSS, no frameworks.
 
@@ -12,7 +12,7 @@ npm run build    # production files land in /dist
 
 ## Changing the content
 
-Everything you read on the site lives in **`src/config/business.js`** — text, phone
+Everything you read on the site lives in **`src/config/business.js`** - text, phone
 number, opening hours, services, photos and colors. Nothing else needs editing.
 
 A few things worth knowing:
@@ -27,7 +27,7 @@ A few things worth knowing:
 
 ## What is not wired up
 
-The contact form is front-end only — it does not send anything yet. It shows a
+The contact form is front-end only - it does not send anything yet. It shows a
 note asking the visitor to call. Connect it to a form service (Formspree, Netlify
 Forms or similar) when you are ready.
 

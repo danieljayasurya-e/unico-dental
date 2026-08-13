@@ -1,6 +1,6 @@
 /*
  * =====================================================================
- *  UNICO DENTAL — SITE CONTENT
+ *  UNICO DENTAL - SITE CONTENT
  * =====================================================================
  *  This is the only file you need to edit.
  *  Every word, color, service and photo on the website comes from here.
@@ -8,7 +8,7 @@
  *  Rules of thumb:
  *   - Text inside "quotes" is what visitors read. Change it freely.
  *   - Leave a field as an empty string ("") and the website will simply
- *     hide that piece — nothing will look broken.
+ *     hide that piece - nothing will look broken.
  *   - Photo links come from unsplash.com. Replace them with your own
  *     photos later by dropping images into /public and using "/my-photo.jpg".
  * =====================================================================
@@ -21,7 +21,7 @@ export const business = {
   name: 'Unico Dental',
   shortName: 'Unico',
   type: 'Dental Clinic',
-  tagline: 'Unico Dental — your trusted local dental clinic',
+  tagline: 'Unico Dental - your trusted local dental clinic',
   city: 'Dallas',
   address: '2475 S Cockrell Hill Rd #400, Dallas, TX 75211, USA',
   addressLines: ['2475 S Cockrell Hill Rd #400', 'Dallas, TX 75211'],
@@ -32,8 +32,8 @@ export const business = {
    * ------------------------------------------------------------- */
   phone: '(972) 982-2477',
   phoneLink: 'tel:+19729822477',
-  whatsapp: '', // e.g. '19729822477' — shows a WhatsApp button when filled
-  email: '', // e.g. 'hello@unicodental.com' — shows an email button when filled
+  whatsapp: '', // e.g. '19729822477' - shows a WhatsApp button when filled
+  email: '', // e.g. 'hello@unicodental.com' - shows an email button when filled
   mapsLink:
     'https://maps.google.com/?cid=15010912806885017172&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA',
 
@@ -73,13 +73,13 @@ export const business = {
   ],
 
   /* ---------------------------------------------------------------
-   *  6. HERO — the first thing visitors see
+   *  6. HERO - the first thing visitors see
    * ------------------------------------------------------------- */
   hero: {
     eyebrow: 'Dallas · Dental Clinic',
     heading: 'Careful dentistry,\nclose to home.',
     subheading:
-      'Teeth cleaning, checkups and cosmetic dentistry for families in Dallas — five days a week on South Cockrell Hill Road.',
+      'Teeth cleaning, checkups and cosmetic dentistry for families in Dallas - five days a week on South Cockrell Hill Road.',
     image:
       'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Treatment room at a dental clinic',
@@ -87,7 +87,7 @@ export const business = {
 
   /* ---------------------------------------------------------------
    *  7. SERVICES
-   *  Add or remove items — the layout adjusts on its own.
+   *  Add or remove items - the layout adjusts on its own.
    * ------------------------------------------------------------- */
   services: {
     eyebrow: 'What we do',
@@ -150,7 +150,7 @@ export const business = {
       },
       {
         title: 'One clinic, one place',
-        text: 'Everything happens at 2475 S Cockrell Hill Road — the same room, the same faces.',
+        text: 'Everything happens at 2475 S Cockrell Hill Road - the same room, the same faces.',
       },
       {
         title: 'Routine and cosmetic care',
@@ -182,11 +182,11 @@ export const business = {
     formNote:
       'This form sends nothing yet. For a confirmed appointment, please call the clinic.',
     successNote:
-      'Thanks — your details are ready to send. To confirm a time today, call (972) 982-2477.',
+      'Thanks - your details are ready to send. To confirm a time today, call (972) 982-2477.',
   },
 
   /* ---------------------------------------------------------------
-   *  12. FAQ — remove any question you do not want
+   *  12. FAQ - remove any question you do not want
    * ------------------------------------------------------------- */
   faq: {
     eyebrow: 'Before you come in',
@@ -206,7 +206,7 @@ export const business = {
       },
       {
         q: 'What do you treat?',
-        a: 'Teeth cleaning, checkups and cosmetic dentistry. If you are not sure which one you need, call and describe it — we will tell you honestly.',
+        a: 'Teeth cleaning, checkups and cosmetic dentistry. If you are not sure which one you need, call and describe it - we will tell you honestly.',
       },
     ],
   },
@@ -220,12 +220,12 @@ export const business = {
 }
 
 /* -----------------------------------------------------------------
- *  COLOURS — change these six values to restyle the whole site.
+ *  COLOURS - change these six values to restyle the whole site.
  * --------------------------------------------------------------- */
 export const theme = {
-  primary: '#0F5F58', // deep teal — buttons, links
+  primary: '#0F5F58', // deep teal - buttons, links
   primaryDark: '#0A423D', // pressed / hover state
-  accent: '#8FC9BC', // mint — eyebrows and small marks
+  accent: '#8FC9BC', // mint - eyebrows and small marks
   ink: '#0D1B1A', // near-black text
   bg: '#FBFAF7', // page background
   neutral: '#EDF1EF', // alternating section background

@@ -90,7 +90,7 @@
   flex: 1 1 180px;
 }
 
-/* the phone number is the strongest action here — give it the full row */
+/* the phone number is the strongest action here - give it the full row */
 .primaryAction {
   flex: 1 1 100%;
   font-size: 1rem;

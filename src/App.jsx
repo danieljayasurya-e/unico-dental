@@ -20,7 +20,7 @@ export default function App() {
     root.style.setProperty('--ink', theme.ink)
     root.style.setProperty('--bg', theme.bg)
     root.style.setProperty('--neutral', theme.neutral)
-    document.title = `${business.name} — ${business.type} in ${business.city}`
+    document.title = `${business.name} - ${business.type} in ${business.city}`
   }, [])
 
   return (

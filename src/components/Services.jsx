@@ -10,7 +10,7 @@ export default function Services() {
   const items = services.items || []
   if (items.length === 0) return null
 
-  // With only one or two services a thin grid looks stretched — go wide instead.
+  // With only one or two services a thin grid looks stretched - go wide instead.
   const feature = items.length <= 2
 
   return (
