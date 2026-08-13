@@ -80,13 +80,15 @@
   flex: none;
 }
 
-/* White, not mint: mint at 0.8rem over photography fails contrast.
-   The mint stays on the rule beside it, where size is not a factor. */
-.eyebrow {
+/* Scoped to the row so it outranks the global .eyebrow colour no matter
+   how the stylesheets end up ordered in the bundle.
+   White, not mint: small mint type over photography fails contrast. */
+.eyebrowRow .eyebrow {
   color: #fff;
   font-size: 0.85rem;
+  font-weight: 600;
   letter-spacing: 0.14em;
-  text-shadow: 0 1px 12px rgba(9, 30, 28, 0.6);
+  text-shadow: 0 1px 14px rgba(9, 30, 28, 0.75);
 }
 
 .title {
