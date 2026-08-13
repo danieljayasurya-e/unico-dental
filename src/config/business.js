@@ -3,7 +3,7 @@
  *  UNICO DENTAL — SITE CONTENT
  * =====================================================================
  *  This is the only file you need to edit.
- *  Every word, colour, service and photo on the website comes from here.
+ *  Every word, color, service and photo on the website comes from here.
  *
  *  Rules of thumb:
  *   - Text inside "quotes" is what visitors read. Change it freely.
@@ -79,7 +79,7 @@ export const business = {
     eyebrow: 'Dallas · Dental Clinic',
     heading: 'Careful dentistry,\nclose to home.',
     subheading:
-      'Cleanings, checkups and cosmetic work for families in Dallas — unhurried appointments on Cockrell Hill Road.',
+      'Teeth cleaning, checkups and cosmetic dentistry for families in Dallas — five days a week on South Cockrell Hill Road.',
     image:
       'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80',
     imageAlt: 'Treatment room at a dental clinic',
@@ -127,10 +127,10 @@ export const business = {
    * ------------------------------------------------------------- */
   about: {
     eyebrow: 'About the clinic',
-    heading: 'A neighbourhood clinic on Cockrell Hill Road',
+    heading: 'A neighborhood clinic on Cockrell Hill Road',
     paragraphs: [
       'Unico Dental is a single clinic in Dallas, not a chain. We keep to cleanings, checkups and cosmetic dentistry so that the everyday work is done well.',
-      'Appointments run Monday through Friday, with Saturday mornings for anyone who cannot take time off during the week. Wednesdays we are closed.',
+      'Appointments run Monday, Tuesday, Thursday and Friday, plus Saturday until three for anyone who cannot take time off during the week. We are closed Wednesday and Sunday.',
     ],
     image:
       'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1600&q=80',
@@ -157,8 +157,8 @@ export const business = {
         text: 'Cleanings, checkups and cosmetic work under one roof, with no referral needed between them.',
       },
       {
-        title: 'A real phone number',
-        text: 'Call (972) 982-2477 during opening hours and speak to the clinic directly.',
+        title: 'Someone picks up',
+        text: 'Call (972) 982-2477 during opening hours and you reach the clinic itself.',
       },
     ],
   },

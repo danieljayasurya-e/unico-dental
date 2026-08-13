@@ -2,9 +2,10 @@
   position: relative;
   min-height: 90vh;
   display: flex;
+  /* headline block sits low; the trust bar closes the frame beneath it */
   align-items: flex-end;
-  padding-top: calc(var(--nav-h) + var(--s-7));
-  padding-bottom: var(--s-7);
+  padding-top: calc(var(--nav-h) + var(--s-8));
+  padding-bottom: var(--s-6);
   overflow: hidden;
   background: var(--ink);
   isolation: isolate;
@@ -35,18 +36,24 @@
   }
 }
 
-/* one tonal overlay — dark at the bottom-left, clear at the top-right */
+/* one tonal wash — weighted to the lower left, so the photograph still reads */
 .media::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
-      100deg,
-      rgba(9, 30, 28, 0.86) 0%,
-      rgba(9, 30, 28, 0.62) 42%,
-      rgba(9, 30, 28, 0.28) 78%
+      104deg,
+      rgba(9, 30, 28, 0.8) 0%,
+      rgba(9, 30, 28, 0.54) 46%,
+      rgba(9, 30, 28, 0.16) 82%
     ),
-    linear-gradient(to bottom, rgba(9, 30, 28, 0.45), rgba(9, 30, 28, 0) 30%);
+    linear-gradient(
+      to bottom,
+      rgba(9, 30, 28, 0.5) 0%,
+      rgba(9, 30, 28, 0) 26%,
+      rgba(9, 30, 28, 0) 58%,
+      rgba(9, 30, 28, 0.45) 100%
+    );
 }
 
 .inner {
@@ -54,26 +61,41 @@
 }
 
 .content {
-  max-width: 720px;
+  max-width: 660px;
   display: grid;
   gap: var(--s-4);
 }
 
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  animation: rise 800ms var(--ease) 120ms both;
+}
+
+.mark {
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+  flex: none;
+}
+
 .eyebrow {
   color: var(--accent);
-  animation: rise 800ms var(--ease) 120ms both;
 }
 
 .title {
   color: #fff;
   white-space: pre-line;
+  text-shadow: 0 1px 40px rgba(9, 30, 28, 0.35);
   animation: rise 900ms var(--ease) 220ms both;
 }
 
 .sub {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.84);
   font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
-  max-width: 52ch;
+  line-height: 1.6;
+  max-width: 46ch;
   animation: rise 900ms var(--ease) 340ms both;
 }
 
@@ -81,7 +103,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
-  margin-top: var(--s-2);
+  margin-top: var(--s-3);
   animation: rise 900ms var(--ease) 440ms both;
 }
 
@@ -92,18 +114,23 @@
   }
 }
 
-/* --- quiet trust strip ------------------------------------------ */
+/* --- quiet trust bar: spans the full grid, closing the composition --- */
 .trust {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--s-2) var(--s-4);
-  margin-top: var(--s-6);
+  gap: var(--s-3) var(--s-6);
+  margin-top: var(--s-8);
   padding-top: var(--s-4);
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  color: rgba(255, 255, 255, 0.74);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.76);
   font-size: 0.9375rem;
   animation: rise 900ms var(--ease) 560ms both;
+}
+
+/* the phone number sits at the far edge of the same rule */
+.trustPhone {
+  margin-left: auto;
 }
 
 .trust a {
@@ -133,6 +160,21 @@
   flex: none;
 }
 
+@media (max-width: 900px) {
+  .hero {
+    padding-top: calc(var(--nav-h) + var(--s-7));
+  }
+
+  .trust {
+    margin-top: var(--s-7);
+    gap: var(--s-2) var(--s-4);
+  }
+
+  .trustPhone {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .hero {
     min-height: 92vh;
@@ -140,8 +182,16 @@
     padding-bottom: var(--s-6);
   }
 
+  .content {
+    gap: var(--s-3);
+  }
+
+  .sub {
+    max-width: 40ch;
+  }
+
   .trust {
-    margin-top: var(--s-5);
+    margin-top: var(--s-6);
     gap: var(--s-2);
     flex-direction: column;
     align-items: flex-start;
@@ -154,7 +204,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .media img,
-  .eyebrow,
+  .eyebrowRow,
   .title,
   .sub,
   .actions,

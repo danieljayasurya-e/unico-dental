@@ -13,7 +13,7 @@ npm run build    # production files land in /dist
 ## Changing the content
 
 Everything you read on the site lives in **`src/config/business.js`** — text, phone
-number, opening hours, services, photos and colours. Nothing else needs editing.
+number, opening hours, services, photos and colors. Nothing else needs editing.
 
 A few things worth knowing:
 
@@ -23,7 +23,7 @@ A few things worth knowing:
   list. The section only appears once there is something real in it.
 - **Photos** are Unsplash links. To use your own, put an image in `/public`
   (say `clinic.jpg`) and write `'/clinic.jpg'` in place of the link.
-- **Colours** are the six values in the `theme` block at the bottom of the file.
+- **Colors** are the six values in the `theme` block at the bottom of the file.
 
 ## What is not wired up
 
@@ -35,8 +35,8 @@ Forms or similar) when you are ready.
 
 ```
 src/
-  config/business.js    all content and colours
-  styles/global.css     design tokens: type, spacing, colour, shadows
+  config/business.js    all content and colors
+  styles/global.css     design tokens: type, spacing, color, shadows
   components/           one file per section
   components/ui/        button, section heading, service card
 ```

@@ -6,19 +6,35 @@
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
   overflow: hidden;
+  box-shadow: var(--shadow-rest);
 }
 
 .item {
+  position: relative;
   display: grid;
   align-content: start;
   gap: var(--s-3);
   padding: var(--s-6) var(--s-5);
-  background: var(--bg);
+  background: var(--surface);
   transition: background-color 220ms var(--ease);
 }
 
-.item:hover {
-  background: var(--surface);
+/* accent rule wipes across the top of the cell on hover */
+.item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 320ms var(--ease);
+}
+
+.item:hover::before {
+  transform: scaleX(1);
 }
 
 .num {

@@ -75,8 +75,9 @@ export default function Contact() {
                     href={action.href}
                     variant={i === 0 ? 'primary' : 'secondary'}
                     external={action.external}
+                    className={i === 0 ? styles.primaryAction : ''}
                   >
-                    {action.key === 'phone' ? action.value : action.label}
+                    {action.key === 'phone' ? `Call ${action.value}` : action.label}
                   </Button>
                 ))}
                 <Button href="MAPS" variant="secondary" withArrow>

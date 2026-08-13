@@ -35,9 +35,14 @@
   display: block;
 }
 
+/* the hours sit on their own quiet surface, subordinate to the form card */
 .hours {
   display: grid;
   gap: 0;
+  padding: var(--s-2) var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
 }
 
 .hourRow {
@@ -82,7 +87,14 @@
 }
 
 .actionRow > * {
-  flex: 1 1 200px;
+  flex: 1 1 180px;
+}
+
+/* the phone number is the strongest action here — give it the full row */
+.primaryAction {
+  flex: 1 1 100%;
+  font-size: 1rem;
+  min-height: 56px;
 }
 
 /* --- right: the form -------------------------------------------- */

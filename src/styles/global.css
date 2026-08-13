@@ -1,11 +1,11 @@
 /* =================================================================
    UNICO DENTAL — design tokens + base styles
-   Colours are injected from src/config/business.js at runtime,
+   Colors are injected from src/config/business.js at runtime,
    with the same values written here as a fallback.
    ================================================================= */
 
 :root {
-  /* --- colour ------------------------------------------------- */
+  /* --- color ------------------------------------------------- */
   --primary: #0f5f58;
   --primary-dark: #0a423d;
   --accent: #8fc9bc;
@@ -43,6 +43,9 @@
 
   --nav-h: 76px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* one vertical rhythm value for every section on the page */
+  --section-y: var(--s-8);
 }
 
 /* --- reset ---------------------------------------------------- */
@@ -117,28 +120,33 @@ h4 {
   font-weight: 400;
   color: var(--ink);
   font-variation-settings: 'SOFT' 0, 'WONK' 0;
+  /* let the browser even out ragged headline lines */
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
-  line-height: 1.06;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.9rem, 5.4vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.032em;
+  /* larger optical size = slightly tighter, more editorial cut */
+  font-optical-sizing: auto;
 }
 
 h2 {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  line-height: 1.14;
-  letter-spacing: -0.025em;
+  font-size: clamp(2.05rem, 3.6vw, 2.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.026em;
 }
 
 h3 {
-  font-size: 1.4rem;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
+  font-size: 1.375rem;
+  line-height: 1.24;
+  letter-spacing: -0.016em;
 }
 
 p {
   max-width: 65ch;
+  text-wrap: pretty;
 }
 
 /* --- layout helpers -------------------------------------------- */
@@ -150,7 +158,7 @@ p {
 }
 
 .section {
-  padding-block: var(--s-8);
+  padding-block: var(--section-y);
   scroll-margin-top: var(--nav-h);
 }
 
@@ -158,23 +166,19 @@ p {
   background: var(--neutral);
 }
 
-.section--tight {
-  padding-block: var(--s-7) var(--s-8);
-}
-
 @media (max-width: 900px) {
-  .section {
-    padding-block: var(--s-7);
+  :root {
+    --section-y: var(--s-7);
   }
 }
 
 @media (max-width: 600px) {
-  body {
-    font-size: 16px;
+  :root {
+    --section-y: var(--s-6);
   }
 
-  .section {
-    padding-block: var(--s-6);
+  body {
+    font-size: 16px;
   }
 }
 

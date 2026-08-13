@@ -15,7 +15,10 @@ export default function Hero() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           {hero.eyebrow && (
-            <span className={`eyebrow ${styles.eyebrow}`}>{hero.eyebrow}</span>
+            <div className={styles.eyebrowRow}>
+              <span className={styles.mark} aria-hidden="true" />
+              <span className={`eyebrow ${styles.eyebrow}`}>{hero.eyebrow}</span>
+            </div>
           )}
 
           <h1 className={styles.title}>{hero.heading}</h1>
@@ -32,27 +35,27 @@ export default function Hero() {
               </Button>
             )}
           </div>
+        </div>
 
-          <div className={styles.trust}>
-            {business.hoursSummary && (
-              <span className={styles.trustItem}>
-                <span className={styles.bullet} aria-hidden="true" />
-                {business.hoursSummary}
-              </span>
-            )}
-            {business.addressLines?.[0] && (
-              <span className={styles.trustItem}>
-                <span className={styles.bullet} aria-hidden="true" />
-                {business.addressLines[0]}, {business.city}
-              </span>
-            )}
-            {business.phone && (
-              <span className={styles.trustItem}>
-                <span className={styles.bullet} aria-hidden="true" />
-                <a href={phoneHref()}>{business.phone}</a>
-              </span>
-            )}
-          </div>
+        {/* the trust bar runs the full width of the grid, under the headline */}
+        <div className={styles.trust}>
+          {business.hoursSummary && (
+            <span className={styles.trustItem}>
+              <span className={styles.bullet} aria-hidden="true" />
+              {business.hoursSummary}
+            </span>
+          )}
+          {business.addressLines?.[0] && (
+            <span className={styles.trustItem}>
+              <span className={styles.bullet} aria-hidden="true" />
+              {business.addressLines[0]}, {business.city}
+            </span>
+          )}
+          {business.phone && (
+            <span className={`${styles.trustItem} ${styles.trustPhone}`}>
+              <a href={phoneHref()}>{business.phone}</a>
+            </span>
+          )}
         </div>
       </div>
     </section>
