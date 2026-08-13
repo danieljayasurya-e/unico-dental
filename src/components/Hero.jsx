@@ -16,7 +16,6 @@ export default function Hero() {
         <div className={styles.content}>
           {hero.eyebrow && (
             <div className={styles.eyebrowRow}>
-              <span className={styles.mark} aria-hidden="true" />
               <span className={`eyebrow ${styles.eyebrow}`}>{hero.eyebrow}</span>
             </div>
           )}
