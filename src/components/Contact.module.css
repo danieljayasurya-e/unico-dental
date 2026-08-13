@@ -1,0 +1,204 @@
+.wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+/* --- left: the practical details -------------------------------- */
+.details {
+  display: grid;
+  gap: var(--s-6);
+}
+
+.block {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.address {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+}
+
+.address span {
+  display: block;
+}
+
+.hours {
+  display: grid;
+  gap: 0;
+}
+
+.hourRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s-4);
+  padding-block: 11px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1rem;
+}
+
+.hourRow:last-child {
+  border-bottom: 0;
+}
+
+.day {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.time {
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.closed .day,
+.closed .time {
+  color: var(--ink-faint);
+}
+
+.actions {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+
+.actionRow > * {
+  flex: 1 1 200px;
+}
+
+/* --- right: the form -------------------------------------------- */
+.form {
+  display: grid;
+  gap: var(--s-4);
+  padding: clamp(24px, 4vw, 48px);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-rest);
+}
+
+.formHead {
+  display: grid;
+  gap: var(--s-2);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+}
+
+.formNote {
+  font-size: 0.9375rem;
+  color: var(--ink-faint);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-4);
+}
+
+.field {
+  display: grid;
+  gap: var(--s-2);
+}
+
+.field label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 14px var(--s-3);
+  min-height: 52px;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease),
+    background-color 200ms var(--ease);
+}
+
+.field textarea {
+  min-height: 128px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5l5-5' stroke='%234a615e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  background: var(--surface);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(15, 95, 88, 0.12);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--ink-faint);
+}
+
+.success {
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-start;
+  padding: var(--s-3) var(--s-4);
+  background: rgba(143, 201, 188, 0.18);
+  border: 1px solid rgba(15, 95, 88, 0.22);
+  border-radius: var(--r-sm);
+  font-size: 0.9375rem;
+  color: var(--ink);
+}
+
+.success p {
+  margin: 0;
+}
+
+.disclaimer {
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+  margin: 0;
+}
+
+@media (max-width: 940px) {
+  .wrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

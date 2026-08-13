@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.item {
+  display: grid;
+  align-content: start;
+  gap: var(--s-3);
+  padding: var(--s-6) var(--s-5);
+  background: var(--bg);
+  transition: background-color 220ms var(--ease);
+}
+
+.item:hover {
+  background: var(--surface);
+}
+
+.num {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--primary);
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+.text {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  max-width: 32ch;
+}
+
+@media (max-width: 600px) {
+  .item {
+    padding: var(--s-5) var(--s-4);
+  }
+}

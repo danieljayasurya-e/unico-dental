@@ -1,0 +1,112 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-rest);
+  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease),
+    border-color 220ms var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(15, 95, 88, 0.22);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--neutral);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms var(--ease);
+}
+
+.card:hover .media img {
+  transform: scale(1.05);
+}
+
+/* single tonal wash keeps the three photos in the same key */
+.media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 27, 26, 0.34),
+    rgba(13, 27, 26, 0) 55%
+  );
+  pointer-events: none;
+}
+
+.index {
+  position: absolute;
+  left: var(--s-4);
+  bottom: var(--s-3);
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.body {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-5) var(--s-4) var(--s-5);
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+.text {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  max-width: 34ch;
+}
+
+/* ---- feature layout (used when there are only 1–2 services) ---- */
+.feature {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.feature .media {
+  flex: 0 0 46%;
+  aspect-ratio: auto;
+}
+
+.feature .body {
+  align-content: center;
+  padding: var(--s-6);
+}
+
+.feature .title {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+}
+
+@media (max-width: 860px) {
+  .feature {
+    flex-direction: column;
+  }
+
+  .feature .media {
+    flex: none;
+    aspect-ratio: 16 / 10;
+  }
+
+  .feature .body {
+    padding: var(--s-5) var(--s-4);
+  }
+}
