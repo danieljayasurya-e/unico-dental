@@ -68,6 +68,7 @@ export const business = {
   nav: [
     { label: 'Services', href: '#services' },
     { label: 'About', href: '#about' },
+    { label: 'Reviews', href: '#reviews' },
     { label: 'Visit', href: '#contact' },
     { label: 'Questions', href: '#faq' },
   ],
@@ -164,12 +165,70 @@ export const business = {
   },
 
   /* ---------------------------------------------------------------
-   *  10. TESTIMONIALS
-   *  Paste real patient reviews here to switch the section on.
-   *  Format: { quote: '...', name: '...' }
-   *  Leave the list empty and the section stays hidden.
+   *  10. REVIEWS
+   *  These are real reviews left on the clinic's Google listing.
+   *  Quotes are the patients' own words — only shortened, never
+   *  reworded. Names are shortened to a first name and initial.
+   *
+   *  To add one:  { quote: '...', name: '...', when: '...' }
+   *  "when" is optional — clear it if you would rather not show dates.
+   *  Empty the "featured" quote and the "items" list and the whole
+   *  section disappears from the page.
    * ------------------------------------------------------------- */
-  testimonials: [],
+  testimonials: {
+    eyebrow: 'From Google reviews',
+    heading: 'Families keep coming back',
+    // Small print under the heading. Keep it truthful.
+    note: 'Reviews left by patients on the clinic’s Google listing.',
+    linkLabel: 'Read them on Google',
+
+    // The one quote that carries the section.
+    featured: {
+      quote:
+        'He is always honest, he says what the children actually need and NOT just to charge and get paid!',
+      name: 'Brisalinda H.',
+      when: 'a year ago',
+    },
+
+    items: [
+      {
+        quote:
+          'Dr. Chen makes my kids feel safe and explains everything with detail. His staff are professional and attentive.',
+        name: 'Yuri C.',
+        when: '3 months ago',
+      },
+      {
+        quote:
+          'Especially Dr. Chen, he’s amazing with little kids and the translation is always surprising me! I 100% recommend coming here!!',
+        name: 'Lucero B.',
+        when: '5 months ago',
+      },
+      {
+        quote:
+          'Love bringing my kids here. The doc is the best! He is very attentive and always does what’s best for us.',
+        name: 'Brenda',
+        when: '7 months ago',
+      },
+      {
+        quote:
+          'Dr. Chen, the dentist assistants, and receptionists are kind and welcoming and make sure no child has a bad experience here.',
+        name: 'Leslie R.',
+        when: '2 years ago',
+      },
+      {
+        quote:
+          'Dr. Chen is amazing with all 3 children. He communicates, gentle, and does not pressure you as a parent to do treatments.',
+        name: 'Naomi R.',
+        when: 'a year ago',
+      },
+      {
+        quote:
+          'Service is great, my kids are always happy to go see the dentist… I really recommend it for kids and adults. The clinic is always clean and everyone is friendly.',
+        name: 'Mariana J.',
+        when: '3 years ago',
+      },
+    ],
+  },
 
   /* ---------------------------------------------------------------
    *  11. CONTACT

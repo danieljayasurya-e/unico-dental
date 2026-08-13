@@ -10,11 +10,18 @@ export default function SectionHeading({
   heading,
   intro,
   layout = 'split',
+  tone = 'light',
   id,
 }) {
   const [ref, revealClass, revealStyle] = useReveal()
 
-  const classes = [styles.head, styles[layout]].filter(Boolean).join(' ')
+  const classes = [
+    styles.head,
+    styles[layout],
+    tone === 'dark' ? styles.onDark : '',
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   return (
     <header

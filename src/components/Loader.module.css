@@ -1,0 +1,83 @@
+/* A brand curtain, not a spinner. It lifts away to reveal the hero. */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100; /* above the navbar (50); nothing else sits this high */
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  transform: translateY(0);
+  transition: transform 900ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.lifting {
+  transform: translateY(-100%);
+}
+
+.inner {
+  display: grid;
+  justify-items: center;
+  gap: var(--s-4);
+  padding-inline: var(--s-4);
+  transition: opacity 400ms var(--ease), transform 600ms var(--ease);
+}
+
+.lifting .inner {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #fff;
+  text-align: center;
+  animation: fadeUp 700ms var(--ease) both;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+/* the line fills as the page comes up */
+.rail {
+  position: relative;
+  width: min(180px, 50vw);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.rail::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform-origin: left;
+  animation: fill 1400ms cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

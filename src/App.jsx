@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Loader from './components/Loader'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <>
+      <Loader />
       <Navbar />
       <main>
         <Hero />

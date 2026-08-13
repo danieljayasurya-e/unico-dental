@@ -46,6 +46,23 @@
   padding-bottom: var(--s-1);
 }
 
+/* for sections that sit on the dark ink background */
+.onDark .title {
+  color: #fff;
+}
+
+.onDark .intro {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.onDark .mark {
+  background: var(--accent);
+}
+
+.onDark :global(.eyebrow) {
+  color: var(--accent);
+}
+
 .center {
   justify-items: center;
   text-align: center;
